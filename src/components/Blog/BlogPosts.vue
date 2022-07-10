@@ -13,7 +13,7 @@
       </div> 
       <div class="ml-12 mt-1  ">
         <p class="text-base-content -my-1 ml-2 mb-1 text-xl">{{post.user.name}}</p>
-        <p class="ml-2">{{new Date(post.dateCreated).toUTCString()}}</p>  
+        <p class="ml-2">{{new Date(post.dateCreated).toLocaleString()}}</p>  
       </div>
   </div>
   </PostVue>

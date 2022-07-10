@@ -78,7 +78,7 @@ export default defineComponent({
 <style>
 
 .dp p{
-  margin: 10px;
+  margin: 5px;
   line-height: 32px;
   margin-bottom:50px;
   margin-top:2em;
@@ -101,7 +101,7 @@ export default defineComponent({
 }
 
 .dp h1,h2,h3,h4{
-  margin: 15px 10px 20px 10px;
+  margin: 15px 5px 20px 5px;
 }
 
 </style>

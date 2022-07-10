@@ -1,1 +1,0 @@
-import{B as t,C as o,D as r}from"./index.22295eb8.js";const s=t.create({baseURL:o+"/blog",withCredentials:!0});s.interceptors.request.use(e=>(r.exports.start(),e),e=>(r.exports.done(),Promise.reject(e)));s.interceptors.response.use(e=>(r.exports.done(),e));export{s as p};

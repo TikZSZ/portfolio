@@ -11,7 +11,7 @@
         </div>
       </div> 
       <div>
-        <p>Copyright © 2021 - All right reserved</p>
+        <p>Copyright © {{new Date().getFullYear()}} - All right reserved</p>
       </div>
     </footer>
 </template>

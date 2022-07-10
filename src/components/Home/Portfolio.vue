@@ -18,7 +18,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 const images = [
         { image:"https://imgix.cosmicjs.com/168ba7a0-313d-11ec-a228-8ba7563f6297-portfolio.png",

@@ -1,21 +1,19 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: { 
-    content: [
-      "./index.html",
-      "./src/**/*.{vue,js,ts,jsx,tsx}",
-    ],
-  options: {
-    safelist: [
-      /data-theme$/,
-    ]
-  }, },
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    {
+      pattern:/data-theme$/
+    }
+  ],
   plugins: [
     require('daisyui')
   ],
-  presets: [],
-  darkMode: false, // or 'media' or 'class'
+  presets: [],// or 'media' or 'class'
   theme: {
     screens: {
       sm: '640px',

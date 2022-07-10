@@ -1,5 +1,5 @@
 <template>
-  <div class="  bg-secondary pb-8 md:mx-20 mx-5 rounded-2xl py-5 ">
+  <div class="  bg-secondary pb-8 md:mx-20 mx-auto px-5 rounded-2xl py-5 ">
     <a href="https://www.typescriptlang.org/"><img class="w-14 mt-5 md:w-20 inline ml-4" src="https://cdn.svgporn.com/logos/typescript.svg" alt=""></a>
     <a href="https://expressjs.com/"><img class="w-14 mt-5 md:w-20 inline ml-4" src="https://cdn.svgporn.com/logos/express.svg" alt=""></a>
     <a href="https://nodejs.org"><img class="w-14 mt-5 md:w-20 inline ml-5" src="https://cdn.svgporn.com/logos/nodejs.svg" alt=""></a>

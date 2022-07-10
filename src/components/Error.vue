@@ -4,14 +4,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
-interface P {
+interface Props {
   variant:string,
   show:boolean,
   textMsg:string,
   style?:string
 }
-  const props = defineProps<P>()
+  const props = defineProps<Props>()
 
 </script>

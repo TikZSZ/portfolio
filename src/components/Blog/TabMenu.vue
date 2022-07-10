@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props=defineProps(['currentTab','b1','b2'])
 const emit = defineEmits(['changeTab'])
 </script>

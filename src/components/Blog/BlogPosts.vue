@@ -5,7 +5,7 @@
     :type="'Read'"
     :postClick="()=>postClick(index)"
   >
-  <div class="mt-3 ml-1 mb-5">
+  <div class="mt-3 ml-1 mb-3">
       <div class="avatar float-left mt-2">
         <div class="rounded-full">
           <div v-html="post.user.avatar" class="text-xl "></div>

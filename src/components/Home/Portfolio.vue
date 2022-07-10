@@ -1,9 +1,11 @@
 <template>
     <div class="grid sm-grid-cols-1 px-3 md:px-10 md:mx-10 mt-5  md:grid-cols-2   lg:grid-cols-3 gap-10  ">
-      <div class="card order-first mb-10  shadow-sm bg-secondary md:bg-secondary-focus text-accent-content"
+      <div class="card order-first mb-10  shadow-sm bg-secondary md:bg-secondary-focus text-accent-content transition-all"
       v-for="({image,title,content,link},index) in images">
         <figure>
-          <img :src="image" />
+          <div style="width:100%;height:0; padding-top:56%;position:relative; background-color:gray;">
+            <img  :src="image" style="position:absolute; top:0; left:0; width:100%;">
+          </div>
           <div class="card-body ">
             <h2 class="card-title font-serif text-base-300 text-2xl ">{{title}}</h2>
             <p class="font-light text-lg">

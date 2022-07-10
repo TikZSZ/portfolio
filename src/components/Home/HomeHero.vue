@@ -1,6 +1,6 @@
 <template>
   <div class="hero"  key="viewArea">
-    <div class="flex-col hero-content lg:flex-row-reverse">
+    <div class="flex-col hero-content lg:flex-row-reverse transition-all">
       <img
         src="https://picsum.photos/id/1005/600/600"
         class="max-h-full rounded-lg shadow-2xl"

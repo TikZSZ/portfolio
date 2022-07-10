@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div v-if="show || store.isMobile">
+    <div v-if="show || store.isMobile" class="transition-all">
       <HomeHero />
       <h1 class="text-center font-mono text-4xl my-10  text-neutral-content">
         Portfolio

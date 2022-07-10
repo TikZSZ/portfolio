@@ -1,4 +1,4 @@
-import { useStore } from './';
+import { useStore } from '../store';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
 import SignUp from '../views/SignUp.vue';

@@ -12,6 +12,7 @@
     "@tiptap/extension-typography": "^2.0.0-beta.17",
     "@tiptap/starter-kit": "^2.0.0-beta.127",
     "@tiptap/vue-3": "^2.0.0-beta.70",
+    "@types/nprogress": "^0.2.0",
     "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "daisyui": "^1.14.5",

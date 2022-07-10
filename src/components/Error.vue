@@ -6,11 +6,12 @@
 
 <script setup>
 
-  const props = defineProps({
-    variant:String,
-    show:String,
-    textMsg:String,
-    style:{type:String,default:''}
-  })
+interface P {
+  variant:string,
+  show:boolean,
+  textMsg:string,
+  style?:string
+}
+  const props = defineProps<P>()
 
 </script>

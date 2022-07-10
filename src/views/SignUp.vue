@@ -1,6 +1,6 @@
 <template>
   <div class="mx-5 md:mx-24  lg:mx-auto  lg:w-1/3 my-40 ">
-    <ErrorVue :variant="variant" :show="show" :textMsg="textMsg"></ErrorVue>
+    <ErrorVue :variant="variant" :show="show" style=" c" :textMsg="textMsg"></ErrorVue>
     <VeeForm
       @submit="submit"
       :validation-schema="schema"
@@ -122,7 +122,7 @@ export default defineComponent({
     };
   },
   methods: {
-    async submit(value: {name:string,email:string,password:string}) {
+    async submit(value:any) {
       try{
         this.handleSubmit('Signing Up...')
         await this.store.signUp(value,this.$router)

@@ -91,12 +91,13 @@ export default defineComponent({
     font-size: 1rem;
     line-height: 26px;
     margin-bottom:33px;
+    color: #fff
   }
 }
 
 .dp code {
   margin: 10px;
-  background-color: fff;
+  background-color: #fff;
   color: black;
 }
 

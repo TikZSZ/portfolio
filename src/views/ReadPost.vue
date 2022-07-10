@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 my-2 md:mx-36  xl:mx-96 lg:my-10" v-if="post">
+  <div class="mx-4 my-2 md:mx-36 lg:my-10" v-if="post">
     <h1 class="ml-2 text-6xl mb-5 md:text-8xl text-base-content">{{post.name}}</h1>
     <p class="ml-2 mt-5 md:mt-10  font-thin text-base-content text-sm sm:text-lg italic ">{{post.description}}</p>
     <div class="mt-5 ml-1 ">
@@ -78,7 +78,7 @@ export default defineComponent({
 <style>
 
 .dp p{
-  margin: 5px;
+  margin: 10px;
   line-height: 32px;
   margin-bottom:50px;
   margin-top:2em;
@@ -101,7 +101,7 @@ export default defineComponent({
 }
 
 .dp h1,h2,h3,h4{
-  margin: 15px 5px 20px 5px;
+  margin: 15px 10px 20px 10px;
 }
 
 </style>

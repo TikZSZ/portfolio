@@ -18,7 +18,7 @@
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             ></path>
           </svg>
-          <label>Click/Touch on yarn init to start installation</label>
+          <label>Click/Touch on bun init to start installation</label>
         </div>
       </div>
     </div>
@@ -28,6 +28,8 @@
         Portfolio
       </h1>
       <Portfolio />
+      <Experience />
+      <Contributions />
       <h1 class="text-center text-4xl my-10 font-mono text-neutral-content">
         TechStack
       </h1>
@@ -42,7 +44,9 @@ import { defineComponent } from "vue";
 import HomeCode from "@/components/Home/HomeCode.vue";
 import HomeHero from "@/components/Home/HomeHero.vue";
 import Portfolio from "@/components/Home/Portfolio.vue";
+import Contributions from "@/components/Home/Contributions.vue";
 import TechStack from "@/components/Home/TechStack.vue";
+import Experience from "@/components/Home/Experience.vue";
 
 export default defineComponent({
   name: "Home",
@@ -50,6 +54,8 @@ export default defineComponent({
     HomeCode,
     HomeHero,
     Portfolio,
+    Experience,
+    Contributions,
     TechStack,
   },
   data() {

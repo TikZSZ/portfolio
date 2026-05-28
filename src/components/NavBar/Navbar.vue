@@ -71,6 +71,7 @@ const logOut =async ()=>{
             </svg>
             Home
           </router-link>
+          <!--
           <router-link :to="{path:'/blog/1'}" class="btn btn-ghost btn-sm rounded-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -151,6 +152,7 @@ const logOut =async ()=>{
             </svg>
             Logout
           </button>
+          -->
           <!-- Theme Chooser -->
           <div class="dropdown dropdown-end">
             <div tabindex="0" class=" -mt-2 normal-case btn-ghost btn">

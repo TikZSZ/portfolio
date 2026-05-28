@@ -1,13 +1,17 @@
 <template>
-  <div :data-theme="store.theme">
-    <div class="bg-base-300 min-h-screen	pb-10">
+  <div :data-theme="store.theme" class="bg-base-300 min-h-screen flex flex-col">
+    <div class="flex-grow w-full max-w-[1600px] mx-auto pb-10 px-4">
       <Navbar></Navbar>
       <router-view />
     </div>
-    <div :data-theme="store.theme" class="bg-neutral  ">
+    <div :data-theme="store.theme" class="bg-neutral">
       <DropDown></DropDown>
     </div>
-    <Footer />
+    <div class="w-full bg-neutral">
+      <div class="max-w-[1600px] mx-auto px-4">
+        <Footer />
+      </div>
+    </div>
     <div class="hidden bordered"></div>
   </div>
 </template>

@@ -45,6 +45,7 @@
               Home
             </router-link>
           </li>
+          <!--
           <li>
             <router-link
               to="/blog"
@@ -155,6 +156,7 @@
               Logout
             </button>
           </li>
+          -->
         </ul>
       </div>
     </div>

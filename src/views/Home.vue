@@ -6,7 +6,6 @@
     <Contributions />
     <Portfolio />
     <TechStack />
-    <AcademyFellowship />
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import Experience from "@/components/Home/Experience.vue";
 import Contributions from "@/components/Home/Contributions.vue";
 import Portfolio from "@/components/Home/Portfolio.vue";
 import TechStack from "@/components/Home/TechStack.vue";
-import AcademyFellowship from "@/components/Home/AcademyFellowship.vue";
 
 export default defineComponent({
   name: "Home",
@@ -29,7 +27,6 @@ export default defineComponent({
     Contributions,
     Portfolio,
     TechStack,
-    AcademyFellowship,
   },
 });
 </script>

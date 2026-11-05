@@ -4,7 +4,7 @@
       <div class="flex items-center gap-2">
         <span class="text-zinc-800 font-sans font-medium">Aditya (TikZSZ)</span>
         <span>•</span>
-        <span>Founding Class Fellowship '27 Applicant</span>
+        <span>Systems & AI Engineer, Founder</span>
       </div>
       <div class="flex items-center gap-4 text-zinc-600">
         <a href="https://github.com/TikZSZ" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-950 transition-colors">GitHub</a>

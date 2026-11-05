@@ -16,7 +16,7 @@
         <a href="#experience" class="hover:text-zinc-950 transition-colors">02.Experience</a>
         <a href="#upstream" class="hover:text-zinc-950 transition-colors">03.OSS</a>
         <a href="#hackathons" class="hover:text-zinc-950 transition-colors">04.Hackathons</a>
-        <a href="#philosophy" class="hover:text-emerald-700 transition-colors font-medium">05.Agency</a>
+        <a href="#systems" class="hover:text-zinc-950 transition-colors">05.Systems</a>
       </nav>
 
       <div class="flex items-center gap-3 text-zinc-500">

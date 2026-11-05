@@ -24,11 +24,13 @@ export default defineComponent({
     const store = useStore();
     return { store };
   },
-  async created() {
-    window.addEventListener("resize", () => {
+  mounted() {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", () => {
+        this.setMobile(window.innerWidth);
+      });
       this.setMobile(window.innerWidth);
-    });
-    this.setMobile(window.innerWidth);
+    }
   },
   methods: {
     setMobile(size: number) {

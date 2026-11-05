@@ -14,11 +14,11 @@
         </div>
 
         <p class="text-zinc-700 text-base sm:text-lg leading-relaxed font-light">
-          <strong class="text-zinc-950 font-medium">Self-taught systems engineer</strong> and builder based in India. <strong class="text-zinc-950 font-medium">Co-founder and CTO at 19</strong>, architecting and scaling a microservices-backed platform adopted across <strong class="text-zinc-950 font-medium">30+ physical salons</strong> in Delhi. Winner of <strong class="text-zinc-950 font-medium">$50K+ across 5+ competitive hackathons</strong> in distributed systems and AI. Contributor to upstream inference and benchmarking frameworks (<a href="#upstream" class="text-zinc-900 underline decoration-zinc-400 hover:decoration-zinc-800 underline-offset-4 font-medium">vLLM</a>, <a href="#upstream" class="text-zinc-900 underline decoration-zinc-400 hover:decoration-zinc-800 underline-offset-4 font-medium">Berkeley Gorilla</a>).
+          <strong class="text-zinc-950 font-medium">Systems engineer and founder.</strong> <strong class="text-zinc-950 font-medium">Co-founder and CTO at 19</strong>, architecting and scaling a microservices-backed platform adopted across <strong class="text-zinc-950 font-medium">30+ physical salons</strong> in Delhi. Winner of <strong class="text-zinc-950 font-medium">$50K+ across 5+ competitive hackathons</strong> in distributed systems and AI. Contributor to upstream inference and benchmarking frameworks (<a href="#upstream" class="text-zinc-900 underline decoration-zinc-400 hover:decoration-zinc-800 underline-offset-4 font-medium">vLLM</a>, <a href="#upstream" class="text-zinc-900 underline decoration-zinc-400 hover:decoration-zinc-800 underline-offset-4 font-medium">Berkeley Gorilla</a>).
         </p>
 
         <p class="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-          Currently building <strong class="text-zinc-950 font-medium">Clyris</strong>: architecting deep code evaluation intelligence (AST-level repository auditing) alongside an autonomous multi-region distribution engine and AI-native CRM. Focused on distributed systems, semantic code analysis, and high-concurrency execution.
+          Currently building <strong class="text-zinc-950 font-medium">Clyris</strong>: an automated code intelligence engine that <strong class="text-zinc-900 font-medium">traces applicant GitHub repos in bulk</strong>, <strong class="text-zinc-900 font-medium">separates tutorial clones from real architecture</strong>, and writes targeted <strong class="text-zinc-900 font-medium">5-minute live technical interview scripts</strong> for hiring teams. Recently, my main focus has shifted toward distribution and sales: building an autonomous <strong class="text-zinc-900 font-medium">4-region outbound engine</strong> and <strong class="text-zinc-900 font-medium">AI-native CRM</strong> to track 59k+ hiring signals and scale customer acquisition hands-free.
         </p>
 
         <!-- Proof-of-work highlights strip -->
@@ -62,8 +62,8 @@
       </div>
 
       <div class="shrink-0">
-        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-zinc-200 shadow-md bg-white ring-1 ring-zinc-200/60">
-          <img src="/headshot.jpg" alt="Aditya" class="w-full h-full object-cover object-top" />
+        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-zinc-200 shadow-sm bg-zinc-100">
+          <img src="/headshot.jpg" alt="Aditya" class="w-full h-full object-cover object-top filter grayscale contrast-[1.08] brightness-[0.98]" />
         </div>
       </div>
     </div>

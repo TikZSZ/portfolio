@@ -84,7 +84,9 @@ router.beforeEach((to,from,next)=>{
   //   return
   // }
   //next({name:'Home'})
-  window.scrollTo({top:0})
+  if (typeof window !== "undefined") {
+    window.scrollTo({top:0})
+  }
   next()
 })
 export default router;

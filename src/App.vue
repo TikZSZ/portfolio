@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0b0d12] min-h-screen text-zinc-200 flex flex-col font-sans selection:bg-zinc-800 selection:text-white">
+  <div class="bg-[#fafaf9] min-h-screen text-zinc-800 flex flex-col font-sans selection:bg-zinc-200 selection:text-zinc-900">
     <Navbar />
     <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10">
       <router-view />

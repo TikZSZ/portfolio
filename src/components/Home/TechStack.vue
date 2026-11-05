@@ -1,26 +1,26 @@
 <template>
-  <section id="stack" class="py-12 border-b border-zinc-800/60">
+  <section id="stack" class="py-12 border-b border-zinc-200/80">
     <div class="mb-8">
-      <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-widest">
+      <div class="flex items-center gap-2 font-mono text-xs text-zinc-500 uppercase tracking-widest font-semibold">
         <span>Competencies</span>
         <span>/</span>
         <span>Systems & Tooling</span>
       </div>
-      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 mt-1">
         Technical Architecture & Stack
       </h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
       <!-- AI & Inference Systems -->
-      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
-        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+      <div class="p-5 rounded-2xl bg-white border border-zinc-200/90 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+        <div class="text-emerald-700 font-semibold text-xs tracking-wider uppercase mb-3">
           AI & Inference
         </div>
-        <ul class="space-y-1.5 text-zinc-300 font-light">
+        <ul class="space-y-1.5 text-zinc-700 font-light">
           <li>vLLM (Serving & Kernels)</li>
           <li>PyTorch</li>
-          <li>Gorilla BFCL (Function Calling)</li>
+          <li>Gorilla BFCL (Tool Calling)</li>
           <li>AST & Semantic Parsing</li>
           <li>Exa Semantic Search</li>
           <li>Agent Memory Architectures</li>
@@ -28,11 +28,11 @@
       </div>
 
       <!-- Distributed Systems & Queues -->
-      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
-        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+      <div class="p-5 rounded-2xl bg-white border border-zinc-200/90 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+        <div class="text-emerald-700 font-semibold text-xs tracking-wider uppercase mb-3">
           Distributed Systems
         </div>
-        <ul class="space-y-1.5 text-zinc-300 font-light">
+        <ul class="space-y-1.5 text-zinc-700 font-light">
           <li>NATS Streaming</li>
           <li>Redis (Ephemeral Locks/Cache)</li>
           <li>Docker & Kubernetes</li>
@@ -43,11 +43,11 @@
       </div>
 
       <!-- Databases & Backend -->
-      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
-        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+      <div class="p-5 rounded-2xl bg-white border border-zinc-200/90 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+        <div class="text-emerald-700 font-semibold text-xs tracking-wider uppercase mb-3">
           Backend & Storage
         </div>
-        <ul class="space-y-1.5 text-zinc-300 font-light">
+        <ul class="space-y-1.5 text-zinc-700 font-light">
           <li>TypeScript & Node.js</li>
           <li>Python</li>
           <li>PostgreSQL & Prisma</li>
@@ -58,11 +58,11 @@
       </div>
 
       <!-- Consensus & Cryptography -->
-      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
-        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+      <div class="p-5 rounded-2xl bg-white border border-zinc-200/90 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+        <div class="text-emerald-700 font-semibold text-xs tracking-wider uppercase mb-3">
           Consensus & Web3
         </div>
-        <ul class="space-y-1.5 text-zinc-300 font-light">
+        <ul class="space-y-1.5 text-zinc-700 font-light">
           <li>Hedera Hashgraph SDK</li>
           <li>Mirror Node Infrastructure</li>
           <li>Decentralized ID (DID / VC)</li>

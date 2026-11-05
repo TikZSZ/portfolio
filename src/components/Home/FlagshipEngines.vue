@@ -25,7 +25,7 @@
               <span class="text-zinc-500">Deep Code Intelligence</span>
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-zinc-950 mt-1.5">
-              Clyris AI: Proof-of-Work Code Evaluation Engine
+              Clyris AI: Autonomous Proof-of-Work Code Auditing & Live Interview Engine
             </h3>
           </div>
           <div class="flex items-center gap-3 text-xs font-mono">
@@ -47,31 +47,31 @@
 
         <div class="mt-5 space-y-3.5 text-sm text-zinc-700 leading-relaxed font-light">
           <p>
-            <strong class="text-zinc-900 font-medium">The Problem:</strong> Resumes for modern engineering roles look indistinguishable, and standard coding puzzles test memorization over real engineering judgment. Senior technical interviewers lose hours manually reviewing candidate take-homes and GitHub profiles before calls.
+            <strong class="text-zinc-900 font-medium">The Technical Reality:</strong> Resumes and portfolio claims have lost signal to AI boilerplate, while standard coding puzzles test memorization over real engineering judgment. Senior technical interviewers lose hours before calls attempting to manually audit complex GitHub repositories, or enter calls unprepared to test architectural depth.
           </p>
           <p>
-            <strong class="text-zinc-900 font-medium">The Solution:</strong> Clyris <strong class="text-zinc-900 font-medium">traces applicant GitHub repos in bulk</strong>, separates tutorial clones from authentic architecture, and writes a targeted <strong class="text-zinc-900 font-medium">5-minute live technical interview script</strong> for hiring teams. Employs <strong class="text-zinc-900 font-medium">tree-sitter AST parsing</strong>, an <strong class="text-zinc-900 font-medium">LLM-as-a-Judge scoring pipeline</strong> (utilizing reasoning models via Google Cloud Vertex AI), and an internal <strong class="text-zinc-900 font-medium">agentic benchmarking harness</strong> to select optimal cost-to-performance inference models.
+            <strong class="text-zinc-900 font-medium">AST-Level Auditing & Live Probes:</strong> Clyris <strong class="text-zinc-900 font-medium">parses applicant repositories in bulk down to the AST</strong>. It differentiates authentic production architectures from popular 40-hour tutorial clones and validates claims made in resumes against actual commit histories. Rather than a vague numerical score, it generates a <strong class="text-zinc-900 font-medium">targeted 5-minute live technical interview script</strong>: extracting exact code snippets with subtle race conditions, unhandled failure windows, and providing the interviewer with <strong class="text-zinc-900 font-medium">fast-fail probes and red-flag rubrics</strong>.
           </p>
         </div>
 
         <!-- Technical Deep-Dive Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6 font-mono text-xs">
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <div class="text-emerald-700 font-medium">Reality Check Engine</div>
+            <div class="text-emerald-700 font-medium">Reality Check & Claim Auditing</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Detects <strong class="text-zinc-900 font-medium">tutorial clones vs authentic production systems</strong> using AST structure analysis. Catches shortcuts like candidates faking an async backend with <code class="text-[11px] px-1 py-0.5 rounded bg-zinc-200/70 text-zinc-800">USE_MOCK = true</code> toggles and client sleep timers.
+              Inspects AST structure to identify <strong class="text-zinc-900 font-medium">tutorial clones vs genuine systems</strong>. Uncovers deceptive shortcuts: caught an applicant claiming an async backend whose entire API was secretly wired to a <code class="text-[11px] px-1 py-0.5 rounded bg-zinc-200/70 text-zinc-800">USE_MOCK = true</code> toggle with client-side sleep timers.
             </div>
           </div>
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <div class="text-emerald-700 font-medium">Tree-Sitter AST & LLM Judge</div>
+            <div class="text-emerald-700 font-medium">Tree-Sitter AST & Vertex AI Judge</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Sequential chunking pipeline powered by native <strong class="text-zinc-900 font-medium">tree-sitter bindings</strong> and multi-stage <strong class="text-zinc-900 font-medium">LLM-as-a-Judge</strong> synthesis (Gemini 3.8 Flash on Vertex AI with thinking tokens, delivering 2.3x cost efficiency).
+              Native <strong class="text-zinc-900 font-medium">Tree-sitter bindings</strong> chunk codebases by scope. Orchestrates an <strong class="text-zinc-900 font-medium">LLM-as-a-Judge pipeline</strong> on Google Cloud Vertex AI (Gemini 3.8 Flash with thinking tokens), achieving <strong class="text-zinc-900 font-medium">2.3x cost efficiency</strong> while matching manual senior staff evaluations.
             </div>
           </div>
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <div class="text-emerald-700 font-medium">5-Min Live Interview Script</div>
+            <div class="text-emerald-700 font-medium">Live Code Probes & Fast-Fails</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Writes targeted interview questions <strong class="text-zinc-900 font-medium">anchored to specific code lines</strong> in the candidate's repository (event bus failure points, idempotency, caching races) with explicit <strong class="text-zinc-900 font-medium">fast-fail probes</strong>.
+              Pins exact code lines (e.g. NATS listener acknowledging before Redis persistence) with <strong class="text-zinc-900 font-medium">interviewer briefings</strong>: what signals to listen for, and explicit <strong class="text-zinc-900 font-medium">fast-fail traps</strong> (e.g. failing to explain the <code class="text-[11px] px-1 py-0.5 rounded bg-zinc-200/70 text-zinc-800">version</code> concurrency key).
             </div>
           </div>
         </div>
@@ -84,17 +84,17 @@
           class="group block relative rounded-xl overflow-hidden border border-zinc-200 bg-zinc-900 shadow-sm hover:shadow-md transition-all"
         >
           <img
-            src="/posters/clyris_ai_dossier.jpg"
-            alt="Clyris AI Code Evaluation Platform Dossier"
+            src="/posters/clyris_interview_probes.jpg"
+            alt="Clyris AI Live Interview Probes and Code Evidence Engine"
             class="w-full aspect-[16/9] object-cover object-top opacity-95 group-hover:opacity-100 transition-all duration-300"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end justify-between p-4 sm:p-5">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-between p-4 sm:p-5">
             <div class="text-white">
               <div class="flex items-center gap-2 text-xs font-mono text-emerald-300">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>clyrisai.com/demo?p=portfolio</span>
+                <span>Live Dossier Artifact: Code-Derived Interview Questions</span>
               </div>
-              <div class="font-medium text-sm sm:text-base mt-0.5">Explore Interactive Candidate Dossier & Code Traces</div>
+              <div class="font-medium text-sm sm:text-base mt-0.5">Explore Interactive Candidate Dossier, AST Traces & Live Interview Probes</div>
             </div>
             <span class="px-3 py-1.5 rounded-lg bg-white/95 text-zinc-950 font-mono text-xs font-medium shadow group-hover:bg-white flex items-center gap-1.5">
               <span>Open Walkthrough</span>
@@ -124,31 +124,31 @@
 
         <div class="mt-5 space-y-3.5 text-sm text-zinc-700 leading-relaxed font-light">
           <p>
-            <strong class="text-zinc-900 font-medium">The Problem:</strong> Scaling B2B enterprise distribution requires constant prospecting, signal monitoring, contact waterfall verification, and SDR orchestration. Manual outreach teams are slow, expensive, and trigger spam filters with uncoordinated batch blasts.
+            <strong class="text-zinc-900 font-medium">The Distribution Challenge:</strong> Running cross-regional outbound across international timezones is fundamentally unsupported by standard sales software. Commercial platforms (Clay, Apollo) charge thousands in markups on stale databases, while traditional CRMs (Salesforce, HubSpot) require tedious manual logging, fail to capture context from LinkedIn DMs, and turn sales execution into slow administrative overhead.
           </p>
           <p>
-            <strong class="text-zinc-900 font-medium">The Solution:</strong> Built a 24/7 autonomous revenue and outbound distribution pipeline that powers Clyris customer acquisition (architected for potential standalone enterprise spinout). Discovers hiring signals in real time, executes multi-layer SMTP waterfall verification, dispatches across <strong class="text-zinc-900 font-medium">4 timezone fleets</strong>, and synchronizes with an <strong class="text-zinc-900 font-medium">AI-native CRM memory brain</strong>.
+            <strong class="text-zinc-900 font-medium">The Bespoke Revenue Stack:</strong> Architected a 24/7 autonomous distribution engine powering Clyris customer acquisition from zero. Ingests <strong class="text-zinc-900 font-medium">59,185+ live hiring intent signals directly from source job boards</strong>, enriches decision-makers at rock-bottom cost using <strong class="text-zinc-900 font-medium">Exa semantic search</strong>, and runs multi-layer <strong class="text-zinc-900 font-medium">SMTP waterfall hygiene</strong>. Dispatches via a custom <strong class="text-zinc-900 font-medium">Master-to-Child campaign sequencer</strong> across 4 regional cloud fleets, wired directly into an <strong class="text-zinc-900 font-medium">AI-native CRM memory brain</strong>.
           </p>
         </div>
 
         <!-- Technical Deep-Dive Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6 font-mono text-xs">
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <div class="text-emerald-700 font-medium">Job Signals Playground</div>
+            <div class="text-emerald-700 font-medium">Source Sourcing & Exa Enrichment</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Continuous ingestion of <strong class="text-zinc-900 font-medium">59,000+ intent hiring signals</strong> and 4,600+ companies discovered via automated cloud scrapers and Exa-powered decision-maker resolution.
+              Continuous scrapers monitor <strong class="text-zinc-900 font-medium">4,670+ hiring companies and 59k+ signals</strong> directly at source. Resolves engineering leadership dynamically via Exa semantic queries, avoiding thousands in monthly SaaS subscriptions.
             </div>
           </div>
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <div class="text-emerald-700 font-medium">Timezone Sequencer</div>
+            <div class="text-emerald-700 font-medium">Master-to-Child Regional Sync</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Multi-regional execution fleets across <strong class="text-zinc-900 font-medium">4 endpoints (US East, US West, India, EMEA)</strong> with morning/noon staggered schedules to maximize open rates and protect deliverability.
+              A single Master Campaign synchronizes state down to <strong class="text-zinc-900 font-medium">4 regional child fleets (US East on AWS, US West on GCP, Europe on OVH, India on DO)</strong> with staggered morning/noon sending windows to protect deliverability.
             </div>
           </div>
           <div class="p-3.5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
             <div class="text-emerald-700 font-medium">AI CRM & Memory Brain</div>
             <div class="text-zinc-600 font-sans mt-1.5 text-xs leading-normal font-light">
-              Smartlead webhook stream, <strong class="text-zinc-900 font-medium">persistent memory for objection tracking</strong>, and an autonomous task agent auto-drafting contextual replies and maintaining the kanban pipeline.
+              Built out of founder sales warfare: ingests <strong class="text-zinc-900 font-medium">unstructured dumps (LinkedIn DMs, email webhooks)</strong>. Auto-resolves contacts, logs persistent <strong class="text-zinc-900 font-medium">objection memories</strong>, drafts contextual replies, and auto-clears pipeline tasks.
             </div>
           </div>
         </div>

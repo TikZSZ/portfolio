@@ -34,20 +34,20 @@
 
         <div class="mt-4 space-y-3 text-sm text-zinc-700 font-light leading-relaxed">
           <p>
-            Every resume for modern software roles looks indistinguishable, while coding tests lose signal to AI. Engineering teams rarely have 30 minutes before every call to audit an applicant's repos. We built an automated engine that audits candidate codebases in bulk, ranks the top 5% by actual architectural depth, and writes a targeted 5-minute technical stress-test for live interview calls.
+            Bootstrapped and architected the complete technology and distribution stack for Clyris, leading systems engineering from initial prototype to production scale.
           </p>
           <ul class="list-disc list-inside space-y-2 text-zinc-600 text-xs sm:text-sm pl-1">
             <li>
-              <strong class="text-zinc-900 font-medium">Reality Check & Claim Validation:</strong> Inspects AST structures and git commits to separate real systems from tutorial clones. Flagged hidden shortcuts (e.g. catching an applicant whose "async backend" was secretly hardcoded to a mock toggle with client-side sleep timers).
+              <strong class="text-zinc-900 font-medium">Distributed Saga & Ingestion Pipeline:</strong> Engineered an asynchronous, multi-stage ingestion system processing multi-repo candidate submissions. Implemented an event-driven architecture with saga-like reconciliation loops, background job queues, and idempotent execution to guarantee fault-tolerant recovery without losing state or burning duplicate LLM tokens.
             </li>
             <li>
-              <strong class="text-zinc-900 font-medium">Resumable Distributed Pipeline:</strong> Engineered a multi-stage ingestion system processing multiple repositories per candidate. Implemented an event-driven architecture with saga-like reconciliation loops, async job queues, and idempotent execution for fault tolerance.
+              <strong class="text-zinc-900 font-medium">Inference Cost Engineering (2.3x Reduction):</strong> Built an internal agentic benchmarking harness to evaluate frontier reasoning models on cost and latency. Benchmarked and migrated deep evaluation stages to Google Cloud Vertex AI (Gemini 3.8 Flash with thinking tokens), slashing inference costs by <strong class="text-zinc-900 font-medium">2.3x</strong> while maintaining evaluation parity with manual senior staff audits.
             </li>
             <li>
-              <strong class="text-zinc-900 font-medium">Autonomous RevOps & Growth Engine:</strong> Architected a 24/7 outbound distribution pipeline with real-time intent signal detection (59k+ hiring signals), multi-provider SMTP waterfall verification, and a 4-region timezone-compensated sequencer (US East, US West, India, EMEA).
+              <strong class="text-zinc-900 font-medium">Autonomous RevOps & AI-Native CRM:</strong> Replaced expensive commercial sales stacks ($3,000+/mo across Clay, Apollo, and Salesforce) by engineering custom revenue infrastructure: scrapers continuously monitoring <strong class="text-zinc-900 font-medium">59,185+ live hiring signals</strong> directly at source, low-cost <strong class="text-zinc-900 font-medium">Exa semantic enrichment</strong>, a <strong class="text-zinc-900 font-medium">Master-to-Child campaign synchronizer</strong> coordinating 4 regional cloud fleets (AWS, GCP, OVH, DigitalOcean), and an <strong class="text-zinc-900 font-medium">AI-native CRM memory brain</strong> resolving contacts and objection tracking from unstructured LinkedIn DMs and email webhooks.
             </li>
             <li>
-              <strong class="text-zinc-900 font-medium">Open Source Resolution:</strong> Authored and published <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-zinc-100 border border-zinc-200 text-zinc-800">@clyrisai/gitresolve</code> on npm, mapping candidate profiles and resumes directly to verifiable GitHub footprints.
+              <strong class="text-zinc-900 font-medium">Open-Source Registry Contribution:</strong> Authored and published <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-zinc-100 border border-zinc-200 text-zinc-800">@clyrisai/gitresolve</code> on npm, mapping candidate profiles and unstructured resumes directly to verifiable GitHub footprints and AST trees.
             </li>
           </ul>
         </div>

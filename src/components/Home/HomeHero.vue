@@ -18,7 +18,7 @@
         </p>
 
         <p class="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-          Currently building <strong class="text-zinc-950 font-medium">Clyris</strong>: an automated code intelligence engine that <strong class="text-zinc-900 font-medium">traces applicant GitHub repos in bulk</strong>, <strong class="text-zinc-900 font-medium">separates tutorial clones from real architecture</strong>, and writes targeted <strong class="text-zinc-900 font-medium">5-minute live technical interview scripts</strong> for hiring teams. Backed by an autonomous <strong class="text-zinc-900 font-medium">4-region distribution engine</strong>.
+          Currently building <strong class="text-zinc-950 font-medium">Clyris</strong>: architecting deep code evaluation intelligence (AST-level repository auditing) alongside an autonomous multi-region distribution engine and AI-native CRM. Focused on distributed systems, semantic code analysis, and high-concurrency execution.
         </p>
 
         <!-- Proof-of-work highlights strip -->

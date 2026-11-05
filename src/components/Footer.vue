@@ -1,17 +1,21 @@
 <template>
-  <footer class="p-10 footer bg-base-200 text-base-content footer-center">
-      <div>
-        <div class="grid grid-flow-col gap-4">
-          <a href="https://twitter.com/TikZ41414516">
-            <i class="fab fa-twitter text-2xl hover:text-3xl "></i>
-          </a> 
-          <a href="https://github.com/tikzsz">
-            <i class="fab fa-github text-2xl hover:text-3xl "></i>
-          </a>
-        </div>
-      </div> 
-      <div>
-        <p>Copyright © {{new Date().getFullYear()}} - All right reserved</p>
+  <footer class="mt-20 border-t border-zinc-800/60 py-10 text-xs font-mono text-zinc-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-zinc-400 font-sans font-medium">Aditya (TikZSZ)</span>
+        <span>•</span>
+        <span>Founding Class Fellowship '27 Applicant</span>
       </div>
-    </footer>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="https://github.com/TikZSZ" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-200 transition-colors">GitHub</a>
+        <a href="https://x.com/TikZSZ" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-200 transition-colors">X / Twitter</a>
+        <a href="https://linkedin.com/in/TikZSZ" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-200 transition-colors">LinkedIn</a>
+        <a href="https://clyrisai.com" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-200 transition-colors">ClyrisAI</a>
+        <a href="mailto:repackergame@gmail.com" class="hover:text-zinc-200 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
 </template>
+
+<script setup lang="ts">
+</script>

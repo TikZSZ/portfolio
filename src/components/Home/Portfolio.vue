@@ -1,100 +1,195 @@
 <template>
-    <div class="flex flex-col px-0 mt-5 gap-12">
-      <div class="card w-full shadow-xl bg-neutral text-neutral-content border border-neutral-focus transition-all duration-500 hover:shadow-primary/20 hover:-translate-y-1"
-      v-for="({title,content,link,github,githubFrontend,githubBackend,publication},index) in projects" :key="index">
-        <div class="card-body md:px-12 py-10">
-          <h2 class="card-title font-sans font-bold text-primary-content text-4xl tracking-tight mb-4">{{title}}</h2>
-          <p class="font-light text-lg mb-8 opacity-90 leading-relaxed max-w-5xl">
-            {{content}}
+  <div class="space-y-16">
+    <!-- TIER 03: Competitive Hackathon Wins -->
+    <section id="hackathons" class="py-12 border-b border-zinc-800/60">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 font-mono text-xs text-emerald-400 uppercase tracking-widest">
+          <span>Tier 03</span>
+          <span>/</span>
+          <span>Rapid Execution</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
+          Competitive Hackathon Wins & Research Prototypes
+        </h2>
+        <p class="text-zinc-400 text-sm mt-2 max-w-2xl font-light">
+          Built under intense 24-72 hour constraints. Evaluated and awarded by enterprise judges for novel cryptographic architectures, zero-trust protocols, and agentic UX.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div
+          v-for="proj in hackathonProjects"
+          :key="proj.title"
+          class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700/80 transition-all"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-zinc-800/60">
+            <div>
+              <div class="flex items-center gap-2 font-mono text-xs">
+                <span class="px-2 py-0.5 rounded font-medium" :class="proj.badgeClass">{{ proj.award }}</span>
+                <span class="text-zinc-500">•</span>
+                <span class="text-zinc-400">{{ proj.context }}</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-white mt-1.5">{{ proj.title }}</h3>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 text-xs font-mono pt-1 sm:pt-0">
+              <a v-if="proj.demo" :href="proj.demo" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white flex items-center gap-1 transition-colors">
+                <span>Demo</span>
+                <span>↗</span>
+              </a>
+              <a v-if="proj.github" :href="proj.github" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white flex items-center gap-1 transition-colors">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+              <a v-if="proj.githubFrontend" :href="proj.githubFrontend" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white flex items-center gap-1 transition-colors">
+                <span>Frontend</span>
+                <span>↗</span>
+              </a>
+              <a v-if="proj.githubBackend" :href="proj.githubBackend" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white flex items-center gap-1 transition-colors">
+                <span>Backend</span>
+                <span>↗</span>
+              </a>
+              <a v-if="proj.press" :href="proj.press" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition-colors">
+                <span>Press</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <p class="mt-4 text-sm text-zinc-300 leading-relaxed font-light">
+            {{ proj.description }}
           </p>
-          <div class="flex flex-wrap gap-6 mt-4">
-            <a v-if="link" :href="link" target="_blank" class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 hover:text-primary transition-all uppercase tracking-wide">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-              Demo
-            </a>
-            <a v-if="github" :href="github" target="_blank" class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 hover:text-primary transition-all uppercase tracking-wide">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a v-if="githubFrontend" :href="githubFrontend" target="_blank" class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 hover:text-primary transition-all uppercase tracking-wide">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              Frontend
-            </a>
-            <a v-if="githubBackend" :href="githubBackend" target="_blank" class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 hover:text-primary transition-all uppercase tracking-wide">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              Backend
-            </a>
-            <a v-if="publication" :href="publication" target="_blank" class="flex items-center gap-2 text-sm font-semibold opacity-70 hover:opacity-100 hover:text-accent transition-all uppercase tracking-wide">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3L22 4" /></svg>
-              Press / Article
-            </a>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+            <span v-for="tag in proj.tags" :key="tag" class="px-2 py-0.5 rounded bg-zinc-800/80 border border-zinc-700/40 text-zinc-300">
+              {{ tag }}
+            </span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- TIER 04: Systems & Engineering Prototypes -->
+    <section id="systems" class="py-12 border-b border-zinc-800/60">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-widest">
+          <span>Tier 04</span>
+          <span>/</span>
+          <span>Distributed Systems</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
+          Systems Engineering & Deep Architecture
+        </h2>
+        <p class="text-zinc-400 text-sm mt-2 max-w-2xl font-light">
+          Explorations in high-concurrency event buses, state synchronization, and NLP cognitive aids.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div
+          v-for="sys in systemsProjects"
+          :key="sys.title"
+          class="p-5 rounded-xl bg-zinc-900/30 border border-zinc-800/80 hover:border-zinc-700/80 transition-all flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-2">
+              <span class="text-zinc-400">{{ sys.category }}</span>
+              <span>{{ sys.meta }}</span>
+            </div>
+            <h3 class="text-base font-semibold text-white">{{ sys.title }}</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed font-light">
+              {{ sys.description }}
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-zinc-800/60 flex items-center justify-between text-xs font-mono">
+            <div class="flex gap-1.5 text-zinc-500">
+              <span v-for="t in sys.tags" :key="t" class="px-1.5 py-0.5 rounded bg-zinc-800/60 text-zinc-400">{{ t }}</span>
+            </div>
+            <div class="flex gap-3">
+              <a v-if="sys.demo" :href="sys.demo" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white">Demo ↗</a>
+              <a v-if="sys.github" :href="sys.github" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">
+const hackathonProjects = [
+  {
+    title: "Hedera Chat: Natural Language Agent for Distributed Ledgers",
+    award: "1st Prize Winner · AI Track",
+    badgeClass: "bg-amber-950/40 text-amber-300 border border-amber-800/40",
+    context: "Hedera HelloFuture Hackathon",
+    description: "Architected an autonomous conversational agent translating plain English user intent into cryptographic Hedera Hashgraph transactions, token transfers, and smart contract execution. Built to eliminate the friction of Web3 RPC endpoints for both developers and non-technical users.",
+    tags: ["LLM Agents", "Hedera Hashgraph", "Consensus Service", "TypeScript", "Next.js"],
+    demo: "https://hedera-ai.vercel.app/",
+    github: "https://github.com/TikZSZ/hedera-chat",
+    press: "https://hedera.com/blog/these-are-the-winners-of-the-2024-hellofuture-hackathon/"
+  },
+  {
+    title: "dMail: Zero-Trust End-to-End Encrypted Decentralized Mail",
+    award: "1st Prize Winner",
+    badgeClass: "bg-amber-950/40 text-amber-300 border border-amber-800/40",
+    context: "Hedera India Hackathon",
+    description: "Designed a zero-trust cryptographic mail protocol powered entirely by client-side asymmetric encryption over Hedera Hashgraph. Completely decouples user identity and personal metadata from message transport, ensuring absolute communication privacy.",
+    tags: ["Zero-Trust", "Asymmetric Cryptography", "Distributed Ledger", "Vue.js", "NestJS"],
+    demo: "https://dmaill.vercel.app",
+    githubFrontend: "https://github.com/TikZSZ/defi-email-frontend",
+    githubBackend: "https://github.com/TikZSZ/defi-email-backend",
+    press: "https://www.dqindia.com/three-innovative-distributed-ledger-based-solutions-top-hedera-india-hackathon"
+  },
+  {
+    title: "HiD: Decentralized Identity & Selective Disclosure Credentials",
+    award: "2nd Prize Winner · Data Track",
+    badgeClass: "bg-zinc-800 text-zinc-300 border border-zinc-700/60",
+    context: "Hedera HelloFuture Hackathon 2.0",
+    description: "Designed a self-sovereign Decentralized Identity (DID) and Verifiable Credentials (VC) infrastructure on Hedera. Allows individuals to prove specific identity claims (e.g., age, accredited status) through cryptographic proofs without disclosing raw personal data.",
+    tags: ["DID / VC", "Cryptographic Signatures", "Hedera SDK", "Privacy Engineering"],
+    demo: "https://hedera-id.vercel.app",
+    github: "https://github.com/TikZSZ/HiD",
+    press: "https://hedera.com/blog/these-are-the-winners-of-the-hellofuture-hackathon-2-0/"
+  },
+  {
+    title: "Factura: Zero-Trust Cryptographic B2B Invoicing Protocol",
+    award: "Hackathon Winner",
+    badgeClass: "bg-zinc-800 text-zinc-300 border border-zinc-700/60",
+    context: "Hedera India Hackathon (Extra Build)",
+    description: "Built on-the-fly during extra remaining time at the Hedera India Hackathon. Provides immutable buyer-seller escrow agreements, automated payment triggers, and transparent audit trails using cryptographic consensus.",
+    tags: ["B2B Settlement", "Escrow HApp", "NestJS", "Vue.js"],
+    demo: "https://facturaa.vercel.app",
+    githubFrontend: "https://github.com/TikZSZ/factura-frontend",
+    githubBackend: "https://github.com/TikZSZ/factura-backend"
+  }
+];
 
-const projects = [
-        { 
-          title:'Hedera Chat 🏆🥇',
-          content:"🌟 1st Prize AI Track Winner at Hedera HelloFuture Hackathon. Engineered an innovative AI-driven conversational interface for the Hedera network. By leveraging advanced language models to abstract away complex blockchain interactions, this project democratizes access to Web3 infrastructure and creates a frictionless experience for both developers and non-technical users.",
-          link:"https://hedera-ai.vercel.app/",
-          github:"https://github.com/TikZSZ/hedera-chat",
-          publication:"https://hedera.com/blog/these-are-the-winners-of-the-2024-hellofuture-hackathon/"
-        },
-        { 
-          title:'HiD 🚀🏅',
-          content:"🏆 2nd Prize Data Track Winner at Hedera HelloFuture Hackathon 2.0. Designed and built a robust Decentralized Identity (DID) and Verifiable Credentials (VC) platform leveraging the Hedera Hashgraph. This platform sets a new standard for self-sovereign identity, prioritizing maximum security, privacy, and seamless integration into modern decentralized ecosystems.",
-          link:"https://hedera-id.vercel.app",
-          github:"https://github.com/TikZSZ/HiD",
-          publication:"https://hedera.com/blog/these-are-the-winners-of-the-hellofuture-hackathon-2-0/"
-        },
-        { 
-          title:'dMail. 🛡️🏆',
-          content:"🥇 1st Prize Winner at Hedera India Hackathon. Created a zero-trust, decentralized email infrastructure built for the Hedera Hackathon. Powered entirely by end-to-end encryption over the Hedera Hashgraph, this protocol ensures absolute user privacy by entirely decoupling personal metadata from message transmission.",
-          link:"https://dmaill.vercel.app",
-          githubFrontend:"https://github.com/TikZSZ/defi-email-frontend",
-          githubBackend:"https://github.com/TikZSZ/defi-email-backend",
-          publication:"https://www.dqindia.com/three-innovative-distributed-ledger-based-solutions-top-hedera-india-hackathon"
-        },
-        { 
-          title:'factura. 💼🏅',
-          content:"🏆 Hedera Hackathon Prize Winner. I had some extra time during the Hedera India Hackathon, so I built and submitted this second application! It's a sophisticated 'Zero Trust' blockchain invoicing application (HApp) for secure buyer-seller transactions, ensuring immutable transaction records and transparent financial trails using Hedera, VueJS, and NestJS.",
-          link:"https://facturaa.vercel.app",
-          githubFrontend:"https://github.com/TikZSZ/factura-frontend",
-          githubBackend:"https://github.com/TikZSZ/factura-backend"
-        },
-        { 
-          title:'@clyrisai/gitresolve',
-          content:"Architected and deployed a powerful utility capable of resolving URLs, resumes, and portfolios into a comprehensive mapping of a candidate's open-source footprint. This system automates the tedious process of repository discovery and drastically improves the efficiency of evaluating developer contributions at scale.",
-          link:"https://www.npmjs.com/package/@clyrisai/gitresolve",
-          github:"https://github.com/clyrisai/gitresolve"
-        },
-        { 
-          title:'Microservice Ticketing App 🎟️',
-          content:"Architected a robust, highly-available distributed ticketing system. Successfully implemented critical microservices patterns including distributed event streaming, ephemeral ticket locking, and high-concurrency handling using NATS Streaming, Redis, MongoDB, and NestJS.",
-          link:"",
-          github:"https://github.com/TikZSZ/microservices-ticket-app"
-        },
-        { 
-          title:'Music App',
-          content:"Developed a highly scalable, Spotify-like streaming architecture. This platform supports high-concurrency multi-file uploads and offers centralized dashboard management, effectively demonstrating complex state management and real-time database synchronization using VueJS, Firebase, and TypeScript.",
-          link:"https://music-app-iota.vercel.app/",
-          github:"https://github.com/TikZSZ/music-app"
-        },
-        { 
-          title:'Jargon Free',
-          content:"Engineered an intelligent content-simplification engine that scans text and utilizes Wikipedia APIs to automatically filter out unnecessary jargon. This React and TypeScript application improves digital accessibility and cognitive load management for complex reading material.",
-          link:"https://jargon-free.netlify.app/",
-          github:"https://github.com/TikZSZ/jargon-free"
-        },
-        { 
-          title:'Hedera Mirror Node Wrapper 📦',
-          content:"Built and currently maintaining a mission-critical Hedera Mirror Node Wrapper. Five years after its initial release, it remains actively adopted and relied upon by developers throughout the broader Hedera ecosystem.",
-          link:"",
-          github:"https://github.com/TikZSZ/ts-hedera-mirror-node-wrapper/"
-        }
-      ]
+const systemsProjects = [
+  {
+    title: "Distributed Microservices Ticketing Engine",
+    category: "Distributed Systems Architecture",
+    meta: "Production Patterns",
+    description: "Event-driven microservices architecture implementing distributed concurrency control, ephemeral ticket locking, and at-least-once delivery semantics using NATS Streaming, Redis, MongoDB, and Kubernetes.",
+    tags: ["NATS Streaming", "Redis Locks", "Docker/K8s", "NestJS"],
+    github: "https://github.com/TikZSZ/microservices-ticket-app"
+  },
+  {
+    title: "Jargon Free: NLP Cognitive Simplifier",
+    category: "Natural Language Processing",
+    meta: "Accessibility Engine",
+    description: "Content-simplification tool scanning dense research and technical writing to automatically detect and deconstruct unnecessary jargon using Wikipedia knowledge graphs and contextual embeddings.",
+    tags: ["React", "TypeScript", "NLP Graph API"],
+    demo: "https://jargon-free.netlify.app/",
+    github: "https://github.com/TikZSZ/jargon-free"
+  },
+  {
+    title: "Real-Time Synchronized Media Streaming Prototype",
+    category: "High-Concurrency State Sync",
+    meta: "Scalable Architecture",
+    description: "Spotify-like streaming system handling multi-file concurrent upload pipelines, real-time database state replication, and responsive playback state management.",
+    tags: ["Vue.js", "Firebase", "TypeScript"],
+    demo: "https://music-app-iota.vercel.app/",
+    github: "https://github.com/TikZSZ/music-app"
+  }
+];
 </script>

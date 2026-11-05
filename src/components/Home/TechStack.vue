@@ -1,32 +1,79 @@
 <template>
-  <div class="px-0 mt-5 mb-20">
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-      <a v-for="(tech, index) in technologies" :key="index" :href="tech.url" target="_blank"
-         class="group flex flex-col items-center justify-center p-6 bg-neutral rounded-xl border border-neutral-focus hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300">
-        <img :src="tech.icon" :alt="tech.name" class="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300 filter grayscale group-hover:grayscale-0">
-        <span class="mt-4 text-sm font-medium text-neutral-content opacity-0 group-hover:opacity-100 transition-opacity duration-300">{{tech.name}}</span>
-      </a>
+  <section id="stack" class="py-12 border-b border-zinc-800/60">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 uppercase tracking-widest">
+        <span>Competencies</span>
+        <span>/</span>
+        <span>Systems & Tooling</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
+        Technical Architecture & Stack
+      </h2>
     </div>
-  </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+      <!-- AI & Inference Systems -->
+      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
+        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+          AI & Inference
+        </div>
+        <ul class="space-y-1.5 text-zinc-300 font-light">
+          <li>vLLM (Serving & Kernels)</li>
+          <li>PyTorch</li>
+          <li>Gorilla BFCL (Function Calling)</li>
+          <li>AST & Semantic Parsing</li>
+          <li>Exa Semantic Search</li>
+          <li>Agent Memory Architectures</li>
+        </ul>
+      </div>
+
+      <!-- Distributed Systems & Queues -->
+      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
+        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+          Distributed Systems
+        </div>
+        <ul class="space-y-1.5 text-zinc-300 font-light">
+          <li>NATS Streaming</li>
+          <li>Redis (Ephemeral Locks/Cache)</li>
+          <li>Docker & Kubernetes</li>
+          <li>GCP Cloud Run / Compute</li>
+          <li>Cron Orchestrators</li>
+          <li>Distributed State Sync</li>
+        </ul>
+      </div>
+
+      <!-- Databases & Backend -->
+      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
+        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+          Backend & Storage
+        </div>
+        <ul class="space-y-1.5 text-zinc-300 font-light">
+          <li>TypeScript & Node.js</li>
+          <li>Python</li>
+          <li>PostgreSQL & Prisma</li>
+          <li>MongoDB</li>
+          <li>NestJS & Express</li>
+          <li>REST & Webhook Streams</li>
+        </ul>
+      </div>
+
+      <!-- Consensus & Cryptography -->
+      <div class="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/80">
+        <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-3">
+          Consensus & Web3
+        </div>
+        <ul class="space-y-1.5 text-zinc-300 font-light">
+          <li>Hedera Hashgraph SDK</li>
+          <li>Mirror Node Infrastructure</li>
+          <li>Decentralized ID (DID / VC)</li>
+          <li>Zero-Trust Client Encryption</li>
+          <li>Asymmetric Key Escrow</li>
+          <li>Smart Contract Integration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-const technologies = [
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/', icon: 'https://cdn.svgporn.com/logos/typescript.svg' },
-  { name: 'Node.js', url: 'https://nodejs.org', icon: 'https://cdn.svgporn.com/logos/nodejs.svg' },
-  { name: 'Express', url: 'https://expressjs.com/', icon: 'https://cdn.svgporn.com/logos/express.svg' },
-  { name: 'NestJS', url: 'https://nestjs.com', icon: 'https://cdn.svgporn.com/logos/nestjs.svg' },
-  { name: 'React', url: 'https://reactjs.org', icon: 'https://cdn.svgporn.com/logos/react.svg' },
-  { name: 'Next.js', url: 'https://nextjs.org', icon: 'https://cdn.svgporn.com/logos/nextjs-icon.svg' },
-  { name: 'Vue 3', url: 'https://v3.vuejs.org/', icon: 'https://cdn.svgporn.com/logos/vue.svg' },
-  { name: 'Nuxt', url: 'https://nuxtjs.org/', icon: 'https://cdn.svgporn.com/logos/nuxt.svg' },
-  { name: 'Tailwind CSS', url: 'https://tailwindcss.com/', icon: 'https://cdn.svgporn.com/logos/tailwindcss-icon.svg' },
-  { name: 'PostgreSQL', url: 'https://www.postgresql.org/', icon: 'https://cdn.svgporn.com/logos/postgresql.svg' },
-  { name: 'MongoDB', url: 'https://www.mongodb.com/', icon: 'https://cdn.svgporn.com/logos/mongodb.svg' },
-  { name: 'Redis', url: 'https://redis.io', icon: 'https://cdn.svgporn.com/logos/redis.svg' },
-  { name: 'Docker', url: 'https://docker.com', icon: 'https://cdn.svgporn.com/logos/docker-icon.svg' },
-  { name: 'Kubernetes', url: 'https://kubernetes.io', icon: 'https://cdn.svgporn.com/logos/kubernetes.svg' },
-  { name: 'Firebase', url: 'https://firebase.google.com', icon: 'https://cdn.svgporn.com/logos/firebase.svg' },
-  { name: 'Vercel', url: 'https://vercel.com', icon: 'https://cdn.svgporn.com/logos/vercel-icon.svg' }
-];
 </script>

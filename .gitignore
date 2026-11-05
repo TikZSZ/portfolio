@@ -1,2 +1,6 @@
 node_modules
+dist
 dest
+*.mp4
+/public/videos/
+/dist/videos/

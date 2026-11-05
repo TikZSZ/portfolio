@@ -1,55 +1,43 @@
 <template>
-  <div :data-theme="store.theme" class="bg-base-300 min-h-screen flex flex-col">
-    <div class="flex-grow w-full max-w-[1600px] mx-auto pb-10 px-4">
-      <Navbar></Navbar>
+  <div class="bg-[#0b0d12] min-h-screen text-zinc-200 flex flex-col font-sans selection:bg-zinc-800 selection:text-white">
+    <Navbar />
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10">
       <router-view />
-    </div>
-    <div :data-theme="store.theme" class="bg-neutral">
-      <DropDown></DropDown>
-    </div>
-    <div class="w-full bg-neutral">
-      <div class="max-w-[1600px] mx-auto px-4">
-        <Footer />
-      </div>
-    </div>
-    <div class="hidden bordered"></div>
+    </main>
+    <Footer />
   </div>
 </template>
 
-<script lang="ts">import axios from "axios";
-import { defineComponent } from "vue-demi";
-import DropDown from "./components/NavBar/DropdownNavBar.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import Navbar from "./components/NavBar/Navbar.vue";
 import Footer from "./components/Footer.vue";
-import Navbar from "./components/NavBar/Navbar.vue"
 import { useStore } from "./store";
 
 export default defineComponent({
-  setup(){
-    const store = useStore()
-    return{ 
-      store
-    }
-  },
-  components:{
+  name: "App",
+  components: {
     Navbar,
     Footer,
-    DropDown
   },
-  async created(){    
-    window.addEventListener('resize',(e)=>{
-      this.setMobile(window.innerWidth)
-    })
-    this.setMobile(window.innerWidth)
-    await this.store.checkLogin() 
+  setup() {
+    const store = useStore();
+    return { store };
   },
-  methods:{
-    setMobile(size:number){
-      if(size > 850){
-        this.store.isMobile=false
-      }else{
-        this.store.isMobile=true
+  async created() {
+    window.addEventListener("resize", () => {
+      this.setMobile(window.innerWidth);
+    });
+    this.setMobile(window.innerWidth);
+  },
+  methods: {
+    setMobile(size: number) {
+      if (size > 850) {
+        this.store.isMobile = false;
+      } else {
+        this.store.isMobile = true;
       }
-    }
-  }
-})
+    },
+  },
+});
 </script>
